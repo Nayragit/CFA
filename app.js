@@ -72,12 +72,14 @@ app.post("/Compare",(req,res)=>{
     getData();
 })
 
-
+app.get("/contact",(req,res)=>{
+    res.render("contact");
+})
 
 app.get("*",(req,res)=>{
     res.send("Sorry!!! This page doesn't exist yet");
 });
 
-app.listen( process.env.PORT || 3000,()=>{
+app.listen(process.env.PORT || 8000,()=>{
     console.log("Server is running at port 3000");
 });
